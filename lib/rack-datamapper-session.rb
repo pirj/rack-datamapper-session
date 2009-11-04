@@ -1,4 +1,5 @@
 require 'rack/session/abstract/id'
+require 'dm-core'
 
 module Rack
   module Session
@@ -13,8 +14,24 @@ module Rack
         data[key]
       end
       
+      def fetch key
+        data[key]
+      end
+      
       def []= key, value
         data[key] = value
+      end
+      
+      def store key, value
+        data[key] = value
+      end
+      
+      def delete key
+        data.delete key
+      end
+      
+      def clear
+        data.clear
       end
       
       def data

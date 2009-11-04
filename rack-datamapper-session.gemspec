@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'rack-datamapper-session'
-  s.version = '0.1'
+  s.version = '0.3'
 
   s.authors = ['Phil Pirozhkov']
   s.date = '2009-11-03'
