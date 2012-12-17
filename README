@@ -1,3 +1,9 @@
+This repo is not supported and has a major flaw: it doesn't clean up sessions on expire.
+Please consider using https://github.com/minad/juno instead.
+
+
+
+
 To use with Sinatra, for example:
 
 require 'rack-datamapper-session'
