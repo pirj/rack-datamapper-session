@@ -1,13 +1,13 @@
 This repo is not supported and has a major flaw: it doesn't clean up sessions on expire.
-Please consider using https://github.com/minad/juno instead.
+Please consider using https://github.com/minad/moneta instead:
 
-
+    use Rack::Session::Moneta, :store => :DataMapper
 
 
 To use with Sinatra, for example:
 
-require 'rack-datamapper-session'
-use Rack::Session::DataMapper
-DataMapper.auto_upgrade!
+    require 'rack-datamapper-session'
+    use Rack::Session::DataMapper
+    DataMapper.auto_upgrade!
 
 Licensed under Do What The Fuck You Want To Public License: http://en.wikipedia.org/wiki/WTFPL
