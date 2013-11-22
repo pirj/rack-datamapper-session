@@ -1,7 +1,8 @@
 This repo is not supported and has a major flaw: it doesn't clean up sessions on expire.
 Please consider using https://github.com/minad/moneta instead:
 
-    use Rack::Session::Moneta, :store => :DataMapper
+    use Rack::Session::Moneta,
+       store: Moneta.new(:DataMapper, setup: (ENV['DATABASE_URL'] || "sqlite://#{Dir.pwd}/development.db"))
 
 
 To use with Sinatra, for example:
